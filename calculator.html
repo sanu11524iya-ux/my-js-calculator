@@ -1,0 +1,53 @@
+<html>
+    <head><title>js calculator</title></head>
+    <body>
+            <style>
+        .box{
+              border: 5px solid;
+             border-color: rgb(35, 1, 67);
+             background-color:rgb(237, 201, 237) ;
+             padding: 10px;
+        }
+            </style>
+        <!-- html part -->
+         <div class="box"> <h1>Calculator</h1><br>
+        <input type="text" id="number1" placeholder="enter 1st number"autofocus>
+        <input type="text" id="number2" placeholder="enter 2nd number"autofocus><br><br>
+        <button type="button" onclick="addition()">ADD</button>
+        <button type="button"  onclick="subtraction()">SUB</button>
+        <button type="button"  onclick="multiplication()">MUL</button>
+        <button type="button"  onclick="division()">DIV</button><br><br>
+        <input type="text" id="result"placeholder="RESULT"></div>
+        <!-- JS PART -->
+        <script type="text/javascript">
+            function addition(){
+                var num1 = Number(document.getElementById("number1").value);
+                // here we mention Number for addition
+                var num2 = Number(document.getElementById("number2").value);
+                var addresult = num1 + num2;
+                document.getElementById("result").value = addresult;
+
+            }
+            function subtraction(){
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                var sub = num1-num2;
+                document.getElementById("result").value = sub;
+            }
+                function multiplication(){
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                var multiply = num1*num2;
+                document.getElementById("result").value = multiply;
+                }
+                function division(){
+                var num1 = document.getElementById("number1").value;
+                var num2 = document.getElementById("number2").value;
+                var divide = num1/num2;
+                document.getElementById("result").value = divide;
+                }
+        </script>
+
+    </body>
+</html>
+    
